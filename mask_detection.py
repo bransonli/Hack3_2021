@@ -9,14 +9,16 @@ from matplotlib import image
 import numpy as np
 from PIL import Image
 
-model = load_model(r'C:\Users\aaron\Desktop\Hack3_2021\mask_recog.h5')
-#input shape 244, 244, 3
+
+def hasMask(path):
+    model = load_model(r'mask_recog.h5')
+    #input shape 244, 244, 3
 
 
-image = image.imread(r'C:\Users\aaron\Desktop\face_mask_adobe.jpg') 
-#image = cv2.resize(frame, (224, 224))
-print(image.shape)
-a = model.predict(image.reshape((1,224,224,3)))
-print(a)
-#[mask, without mask]
+    image = image.imread(path) 
+    #image = cv2.resize(frame, (224, 224))
+    print(image.shape)
+    results = model.predict(image.reshape((1,224,224,3)))
+    return results
+    #[mask, without mask]
 
