@@ -10,6 +10,13 @@ eye_cascade=cv2.CascadeClassifier(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3
 capture=cv2.VideoCapture(0)
 
 while True:
+    img1=cv2.imread(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3_2021\Hack3_2021\saved_img.jpg')
+    cv2.imshow("original", img1)
+    cropped_image= img1[224:600, 224:500]
+    cv2.imshow("cropped", cropped_image)
+    cv2.imwrite("Cropped Image.jpg", cropped_image)
+    
+    
     img_counter=0
     ret,img=capture.read()
     grey_image=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -65,18 +72,9 @@ while True:
         capture.release()
         print("Camera off.")
         cv2.destroyAllWindows()
-    var="Program ended."
-    print(var)
-    time.sleep(4)
 
-    if len(var)>=1:
         
-        img1=cv2.imread(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3_2021\Hack3_2021\saved_img.jpg')
-        cv2.imshow("original", img1)
-        cropped_image= img1[224:600, 224:500]
-        cv2.imshow("cropped", cropped_image)
-        cv2.imwrite("Cropped Image.jpg", cropped_image)
-        break
+
     
 
     
