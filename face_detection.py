@@ -1,6 +1,8 @@
 #importing Required Libraries
 import cv2
 import numpy as np
+import datetime
+import time
 
 face_cascade=cv2.CascadeClassifier(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3_2021\Hack3_2021\haarcascade_frontalface_default.xml')
 eye_cascade=cv2.CascadeClassifier(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3_2021\Hack3_2021\haarcascade_eye.xml')
@@ -44,10 +46,12 @@ while True:
             print("Resizing image to 200x150 scale...")
             img_ = cv2.resize(gray,(50,50))
             print("Resized...")
-            img_resized = cv2.imwrite(filename='saved_img-final.jpg', img=img_)
+            img_resized = cv2.imwrite(filename='saved_img.jpg', img=img_)
             print("Image saved!")
+            
         
             break
+        
         elif key == ord('q'):
             print("Turning off camera.")
             capture.release()
@@ -60,10 +64,22 @@ while True:
         print("Turning off camera.")
         capture.release()
         print("Camera off.")
-        print("Program ended.")
         cv2.destroyAllWindows()
+    var="Program ended."
+    print(var)
+    time.sleep(4)
+
+    if len(var)>=1:
+        
+        img1=cv2.imread(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3_2021\Hack3_2021\saved_img.jpg')
+        cv2.imshow("original", img1)
+        cropped_image= img1[224:600, 224:500]
+        cv2.imshow("cropped", cropped_image)
+        cv2.imwrite("Cropped Image.jpg", cropped_image)
+        break
     
 
+    
 
 capture.release() 
 cv2.destroyAllWindows()
