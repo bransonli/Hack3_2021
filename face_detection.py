@@ -1,5 +1,6 @@
 #importing Required Libraries
 import cv2
+import numpy as np
 
 face_cascade=cv2.CascadeClassifier(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3_2021\Hack3_2021\haarcascade_frontalface_default.xml')
 eye_cascade=cv2.CascadeClassifier(r'C:\Users\Paarth Bathla\Documents\Hack3\Hack3_2021\Hack3_2021\haarcascade_eye.xml')
@@ -61,6 +62,7 @@ while True:
         print("Camera off.")
         print("Program ended.")
         cv2.destroyAllWindows()
+    
 
 
 capture.release() 
