@@ -18,9 +18,9 @@ def hasNose(path):
   nose_rects = nose_cascade.detectMultiScale(gray, 1.3, 5)
 
   if nose_rects == ():
-    print('no nose detected')
+    return False
   else:
-    print('nose detected')
+    return True
 
 
 
