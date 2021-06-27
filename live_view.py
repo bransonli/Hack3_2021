@@ -30,7 +30,7 @@ while True:
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)
     # Draw the rectangle around each face
     for (x, y, w, h) in faces:
-        cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0,255), 2)
+        cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
     # Display
     #cv2.putText(main.main(img, 'live'))
     cv2.putText(img, main.main(img, 'live'), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2, cv2.LINE_AA)
