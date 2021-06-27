@@ -22,7 +22,7 @@ cap = cv2.VideoCapture(0)
 
 while True:
     # Read the frame
-    _, img = cap.read()
+    ret, img = cap.read()
     img = cv2.resize(img,(224,224),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
     # Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -32,6 +32,7 @@ while True:
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
     # Display
+    
     #cv2.putText(main.main(img, 'live'))
     cv2.putText(img, main.main(img, 'live'), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2, cv2.LINE_AA)
     # Stop if escape key is pressed
