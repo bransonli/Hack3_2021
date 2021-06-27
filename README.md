@@ -1,22 +1,22 @@
 # Hack3_2021
 
-##Inspiration
+## Inspiration
 
 There are countless people dying from covid, yet there are people still people who still continue to improperly wear mask or not wear any at all just for the sake of being comfortable. We have seen people who wear masks half-hardheartedly by exposing their nose or even their mouth. We’ve seen the growing trend of mask detection algorithms, but it always seem exploitable by the people who wear mask in the wrong way. So we decided to give it an upgrade. 
 
-##What it does
+## What it does
 
 ElonMask is an api that not only detects people whom doesn’t wear masks but those who don’t wear it properly as well. This increased complexity in the software may allow public surveillance systems to have stricter implementation of mask regulations. 
 
-##Contribution
+## Contribution
 
 This project is made during Hack3 2021. Team members consisting of Aaron Li, and Paarth Bathla.
 
-##how we built it
+## how we built it
 
 This software is mainly consisting of mask detection, mouth detection, and nose detection. The mouth and nose detection is made mainly using OpenCV’s cascade classifier. While mask detection is made using a TensorFlow model. After building these components, we proceed to integrate them through using python modules. During these time we also had to do some data processing, to make sure the compatibility of the data through out these different components. This software is highly dependent on Tensorflow, and OpenCV. 
 
-##Challenges we ran into
+## Challenges we ran into
 
 The first challenge we ran into was the time strain modelling, training, and finding datasets will have on us. In order to lessen the risk of not being able to finish, we decided to use pre trained models and pre made cascade classifiers to lesson our time. 
 
@@ -28,7 +28,7 @@ The fourth challenge was polishing the software. One of which is the algorithm t
 
 The last challenge is the hardware limitations. Both of us uses laptop and some of it were close to minimum specs. Looping this various algorithms will often take time, and this has resulted into very laggy live interactions and even videos. We resorted into using image as our input for demonstration. But we also provide video and live input codes for those that has the capability to run it. 
 
-##Accomplishment
+## Accomplishment
 
 We were able to integrate different technologies to make a software we think can be beneficial to the society.
 
@@ -36,7 +36,7 @@ We were able to overcome challenges mentioned previously regarding learning curv
 
 Able to use our interest of machine learning to create a practical project.
 
-#What we learned
+## What we learned
 
 Integrating OpenCV with tensorflow
 
@@ -46,13 +46,13 @@ Learning how to use Tensorflow (data processing, using pre-trained models)
 
 Learning how to process data
 
-#What’s next
+## What’s next
 
 Putting our software into affordable but capable hardware.
 
 Propose to local government for the implementation of this technology
 
-#Dependencies
+## Dependencies
 
 Tensorflow
 
