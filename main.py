@@ -13,9 +13,9 @@ import mask_detection
 import nose_detection
 import mouth_detection
 
-def main(path): #only takes 224, 224 dimensions
-    if mask_detection.hasMask(path):
-        if mouth_detection.hasMouth(path) or nose_detection.hasNose(path):
+def main(path, type): #only takes 224, 224 dimensions
+    if mask_detection.hasMask(path, type):
+        if mouth_detection.hasMouth(path, type) or nose_detection.hasNose(path, type):
             return "mask not worn properly"
         else:
             return "mask worn properly"
@@ -23,7 +23,8 @@ def main(path): #only takes 224, 224 dimensions
     else:
         return "no mask worn"
 
-print(main(r"C:\Users\aaron\Desktop\face_mask.jpg"))
+
+print(main(r"C:\Users\aaron\Desktop\face_mask.jpg", 'image upload'))
 
 
 
