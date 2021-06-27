@@ -33,10 +33,10 @@ while True:
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
     # Display
     #cv2.putText(main.main(img, 'live'))
-    cv2.putText(img, main.main(img, 'live'), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
+    cv2.putText(img, main.main(img, 'live'), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2, cv2.LINE_AA)
     # Stop if escape key is pressed
     cv2.imshow('img', img)
-    k = cv2.waitKey(30) & 0xff
+    k = cv2.waitKey(1) & 0xff
     if k==27:
         break
 
