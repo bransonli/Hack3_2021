@@ -29,6 +29,7 @@ def hasMask(path, type):
     #img = tf.image.resize(img,(224,224))
     #img = tf.image.resize(img,(1, 224, 224))
     print(frame.shape)
+    frame = cv2.resize(frame,(224,224),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
     results = model.predict(frame.reshape(1,224,224,3))
     if results[0][0] > results[0][1]:
         return True
