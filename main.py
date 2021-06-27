@@ -23,7 +23,7 @@ def main(path, type): #only takes 224, 224 dimensions
     else:
         return "no mask worn"
 
-#print(main(r"C:\Users\aaron\Desktop\nose_only.jpg", 'image upload'))
+#print(main(r"C:\Users\aaron\Desktop\proper2.jpg", 'image upload'))
 
 
 
