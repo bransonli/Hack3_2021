@@ -35,7 +35,6 @@ while True:
     #cv2.putText(main.main(img, 'live'))
     cv2.putText(img, main.main(img, 'live'), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2, cv2.LINE_AA)
     # Stop if escape key is pressed
-    img = cv2.resize(img,(500,500),fx=0,fy=0, interpolation = cv2.INTER_CUBIC)
     cv2.imshow('img', img)
     k = cv2.waitKey(1) & 0xff
     if k==27:
